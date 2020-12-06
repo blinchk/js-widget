@@ -4,9 +4,9 @@ a {
 
 .widget {
     background-color: white;
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 5rem;
+    top: 6rem;
     width: 500px;
     padding: 1rem;
     display: none;
@@ -23,7 +23,7 @@ a {
     background-color: deepskyblue;
     padding: 10px;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 5px;
     color: white;
     transition-duration: 0.3s;
     border-radius: 5px;
@@ -36,7 +36,7 @@ a {
 
 .widget-btn {
     background-color: white;
-    position: absolute;
+    position: fixed;
     display: flex;
     direction: row;
     bottom: 0;
@@ -56,10 +56,11 @@ a {
 }
 
 .widget-notifications-num {
-    margin-left: 10px;
+    margin-left: 10px;  
 }
 
 #posts {
+    margin-top: 10px;
     display: flex;
     height: 50vh;
     overflow-y: scroll;
@@ -166,5 +167,13 @@ a {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .widget {
+        top: 0;
+        height: 100%;
+        width: 100vw;
     }
 }
