@@ -1,9 +1,16 @@
+:root {
+    --primary-color: deepskyblue;
+    --primary-light-color: lightblue;
+    --primary-text-color: white;
+    --text-color: black;
+}
+
 a {
     text-decoration: none;
 }
 
 .widget {
-    background-color: white;
+    background-color: var(--primary-color);
     position: fixed;
     right: 0;
     top: 6rem;
@@ -24,14 +31,14 @@ a {
     padding: 10px;
     text-align: center;
     margin: 5px;
-    color: white;
+    color: var(--primary-text-color);
     transition-duration: 0.3s;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: white;
-    color: deepskyblue;
+    background-color: var(--primary-text-color);
+    color: var(--primary-color);
 }
 
 .widget-btn {
@@ -42,7 +49,7 @@ a {
     bottom: 0;
     right: 10%;
     padding: 1rem 5rem;
-    color: black;
+    color: var(--text-color);
     border: 1px solid black;
     border-radius: 5px 5px 0 0;
     animation: widget-hidden-anim-in;
@@ -50,8 +57,8 @@ a {
 }
 
 .widget-btn:hover {
-    color: deepskyblue;
-    border-color: deepskyblue;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
     transition-duration: 0.3s;
 }
 
@@ -79,15 +86,15 @@ a {
 #post-submit {
     padding: 0.5rem 2rem;
     line-height: 2rem;
-    color: white;
-    background-color: deepskyblue;
+    color: var(--primary-text-color);
+    background-color: var(--primary-color);
     float: right;
     border-radius: 5px;
 }
 
 #post-submit:hover {
-    color: deepskyblue;
-    background-color: white;
+    color: var(--primary-color);
+    background-color: var(--primary-text-color);
     transition-duration: 0.4s;
 }
 
@@ -116,13 +123,13 @@ a {
 
 .post-delete-btn {
     font-weight: 300;
-    color: black;
+    color: var(--text-color);
     float: right;
     transition-duration: 0.4s;
 }
 
 .post-delete-btn:hover {
-    color: deepskyblue;
+    color: var(--primary-color);
 }
 
 .post-text {
@@ -130,7 +137,7 @@ a {
 }
 
 .post-text a {
-    color: deepskyblue;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -145,11 +152,11 @@ a {
     font-style: normal;
     font-weight: 300;
     text-decoration: none;
-    color: deepskyblue;
+    color: var(--primary-color);
 }
 
 .unread { 
-    background-color: lightblue;
+    background-color: var(--primary-light-color);
 }
 
 @keyframes widget-anim-in {
