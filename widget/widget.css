@@ -1,0 +1,170 @@
+a {
+    text-decoration: none;
+}
+
+.widget {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    width: 500px;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    animation: widget-anim-in;
+    animation-duration: 0.3s;
+}
+
+.widget hr {
+    margin-top: 5px;
+}
+
+.btn {
+    background-color: deepskyblue;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: deepskyblue;
+}
+
+.widget-btn {
+    background-color: white;
+    position: absolute;
+    display: flex;
+    direction: row;
+    bottom: 0;
+    right: 10%;
+    padding: 1rem 5rem;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px 5px 0 0;
+    animation: widget-hidden-anim-in;
+    animation-duration: 0.5s;
+}
+
+.widget-btn:hover {
+    color: deepskyblue;
+    border-color: deepskyblue;
+    transition-duration: 0.3s;
+}
+
+.widget-notifications-num {
+    margin-left: 10px;
+}
+
+#posts {
+    display: flex;
+    height: 50vh;
+    overflow-y: scroll;
+    flex-flow: column-reverse;
+}
+
+#post-textbox {
+    width: 100%;
+    height: 6rem;
+    font-family: 'Fira Sans', sans-serif;
+    padding: 0.5rem;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+#post-submit {
+    padding: 0.5rem 2rem;
+    line-height: 2rem;
+    color: white;
+    background-color: deepskyblue;
+    float: right;
+    border-radius: 5px;
+}
+
+#post-submit:hover {
+    color: deepskyblue;
+    background-color: white;
+    transition-duration: 0.4s;
+}
+
+.post {
+    padding: 10px;
+    margin: 5px 0;
+    display: grid;
+    grid-template-areas: "author-img post-author"
+    "author-img post-text"
+    "post-time post-time";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.4fr 2fr 1fr;
+    border-radius: 5px;
+}
+
+.author-img {
+    grid-area: author-img;
+    width: 75px;
+    border-radius: 50%;
+}
+
+.post-author {
+    grid-area: post-author;
+    font-weight: bold;
+}
+
+.post-delete-btn {
+    font-weight: 300;
+    color: black;
+    float: right;
+    transition-duration: 0.4s;
+}
+
+.post-delete-btn:hover {
+    color: deepskyblue;
+}
+
+.post-text {
+    grid-area: post-text;
+}
+
+.post-text a {
+    color: deepskyblue;
+    font-weight: bold;
+}
+
+.post-time {
+    grid-area: post-time;
+    text-align: right;
+    font-style: italic;
+    font-size: 0.75rem;
+}
+
+.post-readed-btn {
+    font-style: normal;
+    font-weight: 300;
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+.unread { 
+    background-color: lightblue;
+}
+
+@keyframes widget-anim-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes widget-hidden-anim-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
