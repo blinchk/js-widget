@@ -10,7 +10,7 @@ a {
 }
 
 .widget {
-    background-color: var(--primary-color);
+    background-color: var(--primary-text-color);
     position: fixed;
     right: 0;
     top: 6rem;
