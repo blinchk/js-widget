@@ -9,6 +9,7 @@ widget.after(widget, widget_hidden_element);
 const posts = document.querySelector("#posts");
 const hide_widget_btn = document.querySelector('#hide-widget-btn');
 const readed_btn = document.querySelector("#mark-all-read");
+var notReadedNumber = 0;
 
 var pictures = [
     'https://store-images.s-microsoft.com/image/apps.36957.13510798885978730.38168a6b-6133-4cea-a5f3-3b6df0b07ea9.4a966d08-2d00-4388-871a-6168d4846658?mode=scale&q=90&h=300&w=300',
@@ -65,11 +66,10 @@ function createNewPost(image, author, text, link, time) {
         post_node.addEventListener('mouseover', (event) => {
             if (post_node.className == 'post unread') {
                 post_node.className = 'post';
-                notReadedNotifications.innerText = notReadedNumber--;
+                notReadedNotifications.innerText = --notReadedNumber;
             }
         });
-        notReadedNumber = document.querySelectorAll('.unread').length;
-        notReadedNotifications.innerText = notReadedNumber;
+        notReadedNotifications.innerText = ++notReadedNumber;
     }
     else {
         post_node.className = 'post';
@@ -103,8 +103,8 @@ function markAllAsReaded() {
     not_readed_posts.forEach(post => {  
         post.className = 'post';
     });
-    var post_readed_btns = document.querySelectorAll('.post-readed-btn');
-    post_readed_btns.forEach(btn => btn.remove());
+    notReadedNumber = 0;
+    notReadedNotifications.innerText = notReadedNumber;
 }
 
 function readNewPostValues() {
