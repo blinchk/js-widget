@@ -50,6 +50,7 @@ function connectFontAwesome() {
 }
 
 function createNewPost(image, author, text, link, time) {
+    notReadedNotifications = document.querySelector('.widget-notifications-num');
     var post = {
         'author_img': image,
         'author': author,
@@ -64,10 +65,10 @@ function createNewPost(image, author, text, link, time) {
         post_node.addEventListener('mouseover', (event) => {
             if (post_node.className == 'post unread') {
                 post_node.className = 'post';
+                notReadedNotifications.innerText = notReadedNumber--;
             }
         });
         notReadedNumber = document.querySelectorAll('.unread').length;
-        notReadedNotifications = document.querySelector('.widget-notifications-num');
         notReadedNotifications.innerText = notReadedNumber;
     }
     else {
